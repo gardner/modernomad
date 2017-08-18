@@ -24,6 +24,4 @@ ENDSSH
 # For this to work, you must have sudo access and your username on your
 # localmachine must match your username on embassynetwork.com (alfred)
 echo "RESTARTING SERVICES"
-echo "(You will be asked for your password twice, that's normal)"
-ssh -t embassynetwork.com "sudo supervisorctl restart gunicorn"
-ssh -t embassynetwork.com "sudo supervisorctl restart celery"
+ssh -t embassynetwork.com "sudo supervisorctl restart gunicorn && sudo supervisorctl restart celery"
